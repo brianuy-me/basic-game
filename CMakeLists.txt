@@ -7,6 +7,12 @@ project(app
 	LANGUAGES CXX
 )
 
+configure_file(
+    ${CMAKE_CURRENT_SOURCE_DIR}/README.md.in
+    ${CMAKE_CURRENT_SOURCE_DIR}/README.md
+    @ONLY
+)
+
 # list the .cpp files here
 add_executable(app 
 	src/main.cpp
