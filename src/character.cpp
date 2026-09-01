@@ -17,10 +17,11 @@ Character::Character(std::string name, int age, float health) : m_name(name), m_
     const void Character::setAllValues(void) {
         system("cls");
         std::cout << "Please type your name" << std::endl;
-        std::cin >> m_name;
+        std::getline(std::cin, m_name);
         system("cls");
         std::cout << "Please type your age" << std::endl;
         std::cin >> m_age;
+        std::cin.ignore(); // Ignore the newline character left in the buffer
     }
 
 // memeber functions
