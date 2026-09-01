@@ -1,7 +1,6 @@
 # Basic game for learning purpose
 
-## Current version
-# app v0.1.0
+# Current version: v0.1.0
 
 ## Objectives
 - Learn CMakeLists.txt syntax
