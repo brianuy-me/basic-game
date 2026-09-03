@@ -9,7 +9,7 @@ cmake -B build -G "Visual Studio 18 2026" -A x64
 # Ninja Multi-Config generator
 cmake -B build -G "Ninja Multi-Config"
 
-cmake --build build --config Debug --target <executable>
+cmake --build build --config Debug --target app
 ```
 
 ## Building - with preset
