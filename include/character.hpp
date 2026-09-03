@@ -2,29 +2,31 @@
 #include <iostream>
 #include <string>
 
-class Character {
-    public:
-    // constructor prototype
-    Character(void); // default values
-    Character(std::string name, int age, float health); // multi set (overload)
+class Character
+{
+public:
+    // constructor
+    Character() : Character("Unknown", 0, 100.f) {}
+
+    Character(const std::string& name, int age, float health) 
+        : m_name(name), m_age(age), m_health(health) {}
 
     // getters prototype
-    std::string getName(void) const;
-    int getAge(void) const;
-    float getHealth(void) const;
+    const std::string&  getName()   const { return m_name; }
+    int                 getAge()    const { return m_age; }
+    float               getHealth() const { return m_health; }
 
-    // setters prototype
-    const void setName(std::string name);
-    const void setAge(int age);
-    const void setHealth(float health);
-
-    const void setAllValues(void);
+    // setters
+    void setName(const std::string& name)    { m_name = name; }
+    void setAge(int age)                     { m_age = age; }
+    void setHealth(float health)             { m_health = health; }
 
     // memeber functions
-    const void printStats(void) const;
+    void setAllValues();
+    void printStats() const;
 
-    private:
-        std::string m_name;
-        int m_age;
-        float m_health;
+private:
+    std::string m_name;
+    int m_age;
+    float m_health;
 };
