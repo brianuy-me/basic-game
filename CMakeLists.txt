@@ -7,7 +7,6 @@ project(app
 	LANGUAGES CXX
 )
 
-# list the .cpp files here
 add_executable(app 
 	src/main.cpp
 	src/character.cpp
